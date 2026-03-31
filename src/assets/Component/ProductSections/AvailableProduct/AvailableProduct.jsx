@@ -1,16 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ProductFeatures from './ProductFeatures';
 
 const AvailableProduct = ({ Productdata }) => {
-    console.log(Productdata, "Productdata");
-    
+
+
+
+    // console.log(Productdata, "Productdata");
+
     return (
-        
-        <div  className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 p-4">
             {
                 Productdata.map((Product) => {
-                    const {features} = Product;
-                    console.log(Product, "Product");
+                    const [isSelected, setIsSelected] = useState(false)
+                    const handleAddedCart = () => {
+                        setIsSelected(true)
+                        alert(`${Product.name} is Selected`)
+                    }
+                    const { features } = Product;
+                    // console.log(Product, "Product");
                     return <div className="card w-96 bg-base-100 shadow-lg  hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
                         <div className="card-body  ">
                             <div className="flex justify-between">
@@ -30,18 +39,19 @@ const AvailableProduct = ({ Productdata }) => {
                                 <span className="text-xl">${Product.price}/{Product.period}</span>
                             </div>
                             <ul className="mt-6 flex flex-col gap-2 text-xs">
-                                
-                                    {
-                                        features.map((feature ,index) => <ProductFeatures 
-                                            key={index}
-                                            feature={feature}></ProductFeatures>)
-                                    }
+
+                                {
+                                    features.map((feature, index) => <ProductFeatures
+                                        key={index}
+                                        feature={feature}></ProductFeatures>)
+                                }
 
                             </ul>
                             <div className="mt-6">
-                                <button className="btn btn-primary btn-block">Subscribe</button>
+                                <button className="btn btn-primary btn-block" onClick={handleAddedCart}>{isSelected === true ? "Added By Cart" : "Buy Now"}</button>
                             </div>
                         </div>
+
                     </div>
                 })
             }

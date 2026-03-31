@@ -1,4 +1,4 @@
-
+import React, { useState } from 'react';
 import { Suspense } from 'react'
 import './App.css'
 import Banner from './assets/Component/NavBar/BannerSection/Banner'
@@ -6,6 +6,7 @@ import NavBar from './assets/Component/NavBar/NavBar'
 import ProductSections from './assets/Component/ProductSections/ProductSections'
 import Review from './assets/Component/ReviewSection/Review'
 import SelectedBtnSection from './assets/Component/SelectedBtnSection/SelectedBtnSection'
+import SelectedProduct from './assets/Component/ProductSections/SelectedProduct/SelectedProduct';
 
 const fetchProducts = async () => {
   const res = await fetch("/Products.json")
@@ -13,15 +14,31 @@ const fetchProducts = async () => {
 }
 function App() {
   const ProductPromise = fetchProducts()
+      const [availableType, setavailableType] = useState(false);
+      const [selectedType, setSelectedType] = useState(true);
+      console.log(selectedType);
+      console.log(availableType);
+
+      const handleAbailableData =() =>{
+        setavailableType(false)
+        setSelectedType(true)
+      }
+      const handleSelectedData =() =>{
+        setavailableType(true)
+        setSelectedType(false)
+      }
 
   return (
     <>
       <NavBar></NavBar>
       <Banner></Banner>
       <Review></Review>
-      <SelectedBtnSection></SelectedBtnSection>
+      <SelectedBtnSection sendAvailable ={handleAbailableData} senSelected={handleSelectedData} selectedType= {selectedType} availableType={availableType}></SelectedBtnSection>
       <Suspense fallback={<span className="loading loading-spinner text-primary"></span>} >
-        <ProductSections ProductPromise={ProductPromise} ></ProductSections>
+        {
+          selectedType? <ProductSections ProductPromise={ProductPromise}  ></ProductSections>: <SelectedProduct></SelectedProduct>
+        }
+      
 
       </Suspense>
     </>
