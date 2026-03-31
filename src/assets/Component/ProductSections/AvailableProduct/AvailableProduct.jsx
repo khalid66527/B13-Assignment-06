@@ -1,0 +1,54 @@
+import React from 'react';
+import ProductFeatures from './ProductFeatures';
+
+const AvailableProduct = ({ Productdata }) => {
+    console.log(Productdata, "Productdata");
+    
+    return (
+        
+        <div  className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {
+                Productdata.map((Product) => {
+                    const {features} = Product;
+                    console.log(Product, "Product");
+                    return <div className="card w-96 bg-base-100 shadow-lg  hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <div className="card-body  ">
+                            <div className="flex justify-between">
+                                <div className="">
+                                    <p>image</p>
+                                </div>
+                                <span className="badge badge-xs badge-warning">{Product.tag}</span>
+                            </div>
+                            <div className="flex justify-between">
+                                <h2 className="text-3xl font-bold">{Product.name}</h2>
+
+                            </div>
+                            <div className="">
+                                <p>{Product.description}</p>
+                            </div>
+                            <div className="">
+                                <span className="text-xl">${Product.price}/{Product.period}</span>
+                            </div>
+                            <ul className="mt-6 flex flex-col gap-2 text-xs">
+                                
+                                    {
+                                        features.map((feature ,index) => <ProductFeatures 
+                                            key={index}
+                                            feature={feature}></ProductFeatures>)
+                                    }
+
+                            </ul>
+                            <div className="mt-6">
+                                <button className="btn btn-primary btn-block">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                })
+            }
+
+
+        </div>
+    );
+};
+
+export default AvailableProduct;

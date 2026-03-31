@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "name": "AI Resume Builder",
+    "description": "Create professional resumes easily with AI tools and modern customizable templates.",
+    "price": 19,
+    "period": "monthly",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": ["100+ templates", "ATS optimization", "Export to PDF"],
+    "icon": "resume-icon"
+  },
+  {
+    "id": 2,
+    "name": "Design Assets Pack",
+    "description": "Access high quality UI kits, icons, and design assets for projects.",
+    "price": 49,
+    "period": "one-time",
+    "tag": "Best Seller",
+    "tagType": "best-seller",
+    "features": ["5000+ icons", "UI kits", "Editable files"],
+    "icon": "design-icon"
+  },
+  {
+    "id": 3,
+    "name": "AI Copywriting Tool",
+    "description": "Generate marketing content, blogs, and ads quickly using powerful AI writing.",
+    "price": 29,
+    "period": "monthly",
+    "tag": "New",
+    "tagType": "new",
+    "features": ["Ad copy generator", "SEO optimization", "Multi-language support"],
+    "icon": "copy-icon"
+  },
+  {
+    "id": 4,
+    "name": "Social Media Scheduler",
+    "description": "Plan and schedule posts across platforms with automation and analytics tools.",
+    "price": 15,
+    "period": "monthly",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": ["Auto posting", "Analytics", "Multi-platform support"],
+    "icon": "social-icon"
+  },
+  {
+    "id": 5,
+    "name": "Website Builder Pro",
+    "description": "Build responsive websites easily without coding using drag and drop tools.",
+    "price": 99,
+    "period": "yearly",
+    "tag": "Best Seller",
+    "tagType": "best-seller",
+    "features": ["Drag & drop builder", "Custom domains", "SEO tools"],
+    "icon": "website-icon"
+  },
+  {
+    "id": 6,
+    "name": "AI Image Generator",
+    "description": "Generate unique images from text prompts with AI powered creative tools.",
+    "price": 25,
+    "period": "monthly",
+    "tag": "New",
+    "tagType": "new",
+    "features": ["Text to image", "HD export", "Custom styles"],
+    "icon": "image-icon"
+  },
+  {
+    "id": 7,
+    "name": "Productivity Suite",
+    "description": "Manage tasks, notes, and schedules efficiently using all in one productivity tools.",
+    "price": 59,
+    "period": "yearly",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": ["Task manager", "Notes", "Calendar integration"],
+    "icon": "productivity-icon"
+  },
+  {
+    "id": 8,
+    "name": "Video Editing Toolkit",
+    "description": "Edit videos professionally with advanced tools, effects, and smooth transitions easily.",
+    "price": 79,
+    "period": "one-time",
+    "tag": "Best Seller",
+    "tagType": "best-seller",
+    "features": ["4K editing", "Transitions", "Audio tools"],
+    "icon": "video-icon"
+  },
+  {
+    "id": 9,
+    "name": "Email Marketing Pro",
+    "description": "Create, automate, and track email campaigns to improve engagement and conversions.",
+    "price": 20,
+    "period": "monthly",
+    "tag": "New",
+    "tagType": "new",
+    "features": ["Email templates", "Automation", "Analytics"],
+    "icon": "email-icon"
+  }
+]
