@@ -1,14 +1,14 @@
 import React from 'react';
 import NavBarImg from "../../products/shopping-cart.png";
 
-const NavBar = () => {
+const NavBar = ({ selectedProduct }) => {
     return (
         <div className='bg-base-100 shadow-lg'>
             <div className="navbar container mx-auto">
 
                 {/* Left Logo + Mobile  */}
                 <div className="navbar-start">
-                    
+
                     {/* Mobile  */}
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -37,7 +37,12 @@ const NavBar = () => {
                 <div className="navbar-end flex items-center gap-3">
                     <div className="indicator">
                         <img src={NavBarImg} alt="cart" className="w-6" />
-                        <span className="badge badge-sm indicator-item">0</span>
+                        <span
+                            className={`badge badge-sm indicator-item text-white ${selectedProduct.length > 0 ? "bg-red-500" : "hidden"
+                                }`}
+                        >
+                            {selectedProduct.length}
+                        </span>
                     </div>
                     <p className="hidden md:block font-bold">Login</p>
 

@@ -16,8 +16,10 @@ function App() {
   const ProductPromise = fetchProducts()
       const [availableType, setavailableType] = useState(false);
       const [selectedType, setSelectedType] = useState(true);
-      console.log(selectedType);
-      console.log(availableType);
+      const [selectedProduct, setSelectedProduct] = useState([]);
+
+      // console.log(selectedType);
+      // console.log(availableType);
 
       const handleAbailableData =() =>{
         setavailableType(false)
@@ -30,13 +32,13 @@ function App() {
 
   return (
     <>
-      <NavBar></NavBar>
+      <NavBar selectedProduct={selectedProduct}></NavBar>
       <Banner></Banner>
       <Review></Review>
-      <SelectedBtnSection sendAvailable ={handleAbailableData} senSelected={handleSelectedData} selectedType= {selectedType} availableType={availableType}></SelectedBtnSection>
+      <SelectedBtnSection sendAvailable ={handleAbailableData} senSelected={handleSelectedData} selectedType= {selectedType} availableType={availableType} selectedProduct={selectedProduct}></SelectedBtnSection>
       <Suspense fallback={<span className="loading loading-spinner text-primary"></span>} >
         {
-          selectedType? <ProductSections ProductPromise={ProductPromise}  ></ProductSections>: <SelectedProduct></SelectedProduct>
+          selectedType? <ProductSections ProductPromise={ProductPromise} selectedProduct={selectedProduct} setSelectedProduct={setSelectedProduct} ></ProductSections> : <SelectedProduct selectedProduct={selectedProduct}></SelectedProduct>
         }
       
 

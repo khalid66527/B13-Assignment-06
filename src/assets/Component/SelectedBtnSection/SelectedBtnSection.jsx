@@ -1,7 +1,7 @@
 import AvailableProduct from "../ProductSections/AvailableProduct/AvailableProduct";
 
 
-const SelectedBtnSection = ({selectedType  ,sendAvailable ,senSelected ,availableType}) => {
+const SelectedBtnSection = ({selectedType  ,sendAvailable ,senSelected ,availableType ,selectedProduct}) => {
   
 
     // console.log(selectedType);
@@ -26,7 +26,7 @@ const SelectedBtnSection = ({selectedType  ,sendAvailable ,senSelected ,availabl
                     className={`btn rounded-2xl ${availableType  ? "bg-gradient-to-r from-indigo-600 to-purple-600 text-white" : "bg-gray-200"} `}
 
                 >
-                    Cart ({sendAvailable.length})
+                    Cart ({selectedProduct.length})
                 </button>
             </div>
                

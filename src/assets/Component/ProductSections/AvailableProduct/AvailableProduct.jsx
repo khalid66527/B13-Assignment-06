@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ProductFeatures from './ProductFeatures';
 
-const AvailableProduct = ({ Productdata }) => {
+const AvailableProduct = ({ Productdata  , selectedProduct, setSelectedProduct}) => {
 
 
 
@@ -17,6 +17,7 @@ const AvailableProduct = ({ Productdata }) => {
                     const handleAddedCart = () => {
                         setIsSelected(true)
                         alert(`${Product.name} is Selected`)
+                        setSelectedProduct([...selectedProduct, Productdata])
                     }
                     const { features } = Product;
                     // console.log(Product, "Product");
@@ -24,7 +25,7 @@ const AvailableProduct = ({ Productdata }) => {
                         <div className="card-body  ">
                             <div className="flex justify-between">
                                 <div className="">
-                                    <p>image</p>
+                                    <p>image{selectedProduct.length }/{Productdata.length}</p>
                                 </div>
                                 <span className="badge badge-xs badge-warning">{Product.tag}</span>
                             </div>
