@@ -38,11 +38,12 @@ function App() {
       <SelectedBtnSection sendAvailable ={handleAbailableData} senSelected={handleSelectedData} selectedType= {selectedType} availableType={availableType} selectedProduct={selectedProduct}></SelectedBtnSection>
       <Suspense fallback={<span className="loading loading-spinner text-primary"></span>} >
         {
-          selectedType? <ProductSections ProductPromise={ProductPromise} selectedProduct={selectedProduct} setSelectedProduct={setSelectedProduct} ></ProductSections> : <SelectedProduct selectedProduct={selectedProduct}></SelectedProduct>
+          selectedType? <ProductSections ProductPromise={ProductPromise} selectedProduct={selectedProduct} setSelectedProduct={setSelectedProduct} ></ProductSections> : <SelectedProduct selectedProduct={selectedProduct} setSelectedProduct={setSelectedProduct}></SelectedProduct>
         }
       
 
       </Suspense>
+      {/* <SelectedProduct></SelectedProduct> */}
     </>
   )
 }

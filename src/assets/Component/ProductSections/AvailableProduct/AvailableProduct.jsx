@@ -17,7 +17,7 @@ const AvailableProduct = ({ Productdata  , selectedProduct, setSelectedProduct})
                     const handleAddedCart = () => {
                         setIsSelected(true)
                         alert(`${Product.name} is Selected`)
-                        setSelectedProduct([...selectedProduct, Productdata])
+                        setSelectedProduct([...selectedProduct, Product])
                     }
                     const { features } = Product;
                     // console.log(Product, "Product");
