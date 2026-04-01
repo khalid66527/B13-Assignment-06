@@ -7,6 +7,7 @@ import ProductSections from './assets/Component/ProductSections/ProductSections'
 import Review from './assets/Component/ReviewSection/Review'
 import SelectedBtnSection from './assets/Component/SelectedBtnSection/SelectedBtnSection'
 import SelectedProduct from './assets/Component/ProductSections/SelectedProduct/SelectedProduct';
+import StepsSection from './assets/Component/StepsSection/StepsSection';
 
 const fetchProducts = async () => {
   const res = await fetch("/Products.json")
@@ -40,10 +41,10 @@ function App() {
         {
           selectedType? <ProductSections ProductPromise={ProductPromise} selectedProduct={selectedProduct} setSelectedProduct={setSelectedProduct} ></ProductSections> : <SelectedProduct selectedProduct={selectedProduct} setSelectedProduct={setSelectedProduct}></SelectedProduct>
         }
-      
-
       </Suspense>
-      {/* <SelectedProduct></SelectedProduct> */}
+      <StepsSection></StepsSection>
+
+     
     </>
   )
 }

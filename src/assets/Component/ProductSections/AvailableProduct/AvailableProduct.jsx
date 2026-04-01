@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import ProductFeatures from './ProductFeatures';
+// import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 
 const AvailableProduct = ({ Productdata  , selectedProduct, setSelectedProduct}) => {
 

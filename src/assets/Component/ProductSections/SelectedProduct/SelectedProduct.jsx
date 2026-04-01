@@ -1,5 +1,5 @@
 import React from 'react';
-import Img from "../../../products/rocket.png";
+import Img from "../../../products/shopping-cart.png";
 
 const SelectedProduct = ({ selectedProduct, setSelectedProduct }) => {
 
@@ -7,9 +7,9 @@ const SelectedProduct = ({ selectedProduct, setSelectedProduct }) => {
         const filteredProduct = selectedProduct.filter(
             selectDeleteProduct => selectDeleteProduct.name !== Product.name
         );
-        alert("removed from cart")
+        // alert("removed from cart")
         setSelectedProduct(filteredProduct);
-        alert("all remoned")
+        alert(`${Product.name} ! removed from car`)
     }
 
     const totalPrice = selectedProduct.reduce((sum, product) => sum + product.price, 0);
@@ -17,20 +17,30 @@ const SelectedProduct = ({ selectedProduct, setSelectedProduct }) => {
     return (
         <div className='container mx-auto'>
             <h1 className='text-3xl font-bold'>Your Cart</h1>
-            {selectedProduct.map((Product, index) => (
-                <div className="flex justify-between mb-4 bg-gray-50 rounded-2xl items-center border p-8" key={index}>
-                    <div className="flex items-center gap-3">
-                        <img src={Img} alt="Img" />
+            { 
+                selectedProduct.length === 0 ?
+                <div className=' flex flex-col items-center space-y-3'>
+                    <img src={Img} alt=""  className='w-30 h-30 font-black' />
+                    <p className='text-3xl'>Your cart is empty</p>
+                    <p>Add some products to get started.</p>
+                </div>
+                 :
+                 
+                 selectedProduct.map((Product, index) => (
+                    <div className="flex justify-between mb-4 bg-gray-50 rounded-2xl items-center border p-8" key={index}>
+                        <div className="flex items-center gap-3">
+                            <img src={Img} alt="Img" />
+                            <div>
+                                <h2 className='font-bold text-2xl'>{Product.name}</h2>
+                                <p className='text-2xl'>${Product.price} / {Product.period}</p>
+                            </div>
+                        </div>
                         <div>
-                            <h2 className='font-bold text-2xl'>{Product.name}</h2>
-                            <p className='text-2xl'>${Product.price} / {Product.period}</p>
+                            <button className='btn text-red-500 text-xl' onClick={() => handleDeleteSelectProduct(Product)}>Remove</button>
                         </div>
                     </div>
-                    <div>
-                        <button className='btn text-red-500 text-xl' onClick={() => handleDeleteSelectProduct(Product)}>Remove</button>
-                    </div>
-                </div>
-            ))}
+                ))
+            }
 
             <div className="my-10">
                 <div className="flex justify-between p-5 bg-gray-50">
@@ -39,8 +49,8 @@ const SelectedProduct = ({ selectedProduct, setSelectedProduct }) => {
                 </div>
                 <button className='btn text-2xl py-7 rounded-2xl w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white'
                     onClick={() => {
-                        setSelectedProduct([]); 
-                        alert("Proceed to Checkout ! All Removed");     
+                        setSelectedProduct([]);
+                        alert("Proceed to Checkout ! All Removed");
                     }}>
                     Proceed to Checkout
                 </button>
