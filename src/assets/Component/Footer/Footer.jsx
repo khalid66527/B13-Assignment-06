@@ -7,11 +7,11 @@ const FooterSection = () => {
         <footer className="bg-[#0B1120] text-gray-400 py-16 px-4 border-t border-gray-800">
             <div className="container mx-auto">
                 {/* Main Content */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 mb-16">
+                <div className="grid text-center grid-cols-1  md:grid-cols-2 lg:grid-cols-6 gap-12 mb-16">
 
                     <div className="lg:col-span-2">
                         <h2 className="text-white text-3xl font-bold mb-4">DigiTools</h2>
-                        <p className="max-w-xs leading-relaxed text-sm">
+                        <p className="max-w-xs leading-relaxed text-sm ">
                             Premium digital tools for creators, professionals, and businesses.
                             Work smarter with our suite of powerful tools.
                         </p>

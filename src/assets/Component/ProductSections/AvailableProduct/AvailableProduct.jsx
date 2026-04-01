@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import ProductFeatures from './ProductFeatures';
-// import { ToastContainer, toast } from 'react-toastify';
+
 import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 
 
 
-const AvailableProduct = ({ Productdata  , selectedProduct, setSelectedProduct}) => {
+const AvailableProduct = ({ Productdata, selectedProduct, setSelectedProduct }) => {
 
 
 
@@ -20,7 +21,7 @@ const AvailableProduct = ({ Productdata  , selectedProduct, setSelectedProduct})
                     const [isSelected, setIsSelected] = useState(false)
                     const handleAddedCart = () => {
                         setIsSelected(true)
-                        alert(`${Product.name} is Selected`)
+                        toast.success(`${Product.name} is Selected`)
                         setSelectedProduct([...selectedProduct, Product])
                     }
                     const { features } = Product;
@@ -29,9 +30,20 @@ const AvailableProduct = ({ Productdata  , selectedProduct, setSelectedProduct})
                         <div className="card-body  ">
                             <div className="flex justify-between">
                                 <div className="">
-                                    <p>image{selectedProduct.length }/{Productdata.length}</p>
+                                    <img src={Product.image} alt="" className="w-8 h-8 mx-auto" />
                                 </div>
-                                <span className="badge badge-xs badge-warning">{Product.tag}</span>
+                                <span
+                                    className={`badge badge-xs text-white ${Product.tag === "New"
+                                            ? "bg-green-500"
+                                            : Product.tag === "Best Seller"
+                                                ? "bg-yellow-500"
+                                                : Product.tag === "Popular"
+                                                    ? "bg-purple-500"
+                                                    : "bg-blue-400"
+                                        }`}
+                                >
+                                    {Product.tag}
+                                </span>
                             </div>
                             <div className="flex justify-between">
                                 <h2 className="text-3xl font-bold">{Product.name}</h2>
@@ -53,7 +65,7 @@ const AvailableProduct = ({ Productdata  , selectedProduct, setSelectedProduct})
 
                             </ul>
                             <div className="mt-6">
-                                <button className="btn btn-primary btn-block" onClick={handleAddedCart}>{isSelected === true ? "Added By Cart" : "Buy Now"}</button>
+                                <button className="btn rounded-2xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white" onClick={handleAddedCart}>{isSelected === true ? "Added By Cart" : "Buy Now"}</button>
                             </div>
                         </div>
 

@@ -8,7 +8,7 @@
     "tag": "Popular",
     "tagType": "popular",
     "features": ["100+ templates", "ATS optimization", "Export to PDF"],
-    "icon": "resume-icon"
+    "image": "https://i.ibb.co.com/vCghtQRM/writing-2327400-1.png"
   },
   {
     "id": 2,
@@ -19,7 +19,7 @@
     "tag": "Best Seller",
     "tagType": "best-seller",
     "features": ["5000+ icons", "UI kits", "Editable files"],
-    "icon": "design-icon"
+    "image": "https://i.ibb.co.com/LdBLGBMs/design-tool.png"
   },
   {
     "id": 3,
@@ -30,7 +30,17 @@
     "tag": "New",
     "tagType": "new",
     "features": ["Ad copy generator", "SEO optimization", "Multi-language support"],
-    "icon": "copy-icon"
+    "image": "https://i.ibb.co.com/S4zt44xk/Instagram.png"
+  },{
+    "id": 5,
+    "name": "Website Builder Pro",
+    "description": "Build responsive websites easily without coding using drag and drop tools.",
+    "price": 99,
+    "period": "yearly",
+    "tag": "Best Seller",
+    "tagType": "best-seller",
+    "features": ["Drag & drop builder", "Custom domains", "SEO tools"],
+    "image": "https://i.ibb.co.com/4nBTDj9T/portfolio.png"
   },
   {
     "id": 4,
@@ -41,19 +51,9 @@
     "tag": "Popular",
     "tagType": "popular",
     "features": ["Auto posting", "Analytics", "Multi-platform support"],
-    "icon": "social-icon"
+    "image": "https://i.ibb.co.com/ksRSm1fd/banner.png"
   },
-  {
-    "id": 5,
-    "name": "Website Builder Pro",
-    "description": "Build responsive websites easily without coding using drag and drop tools.",
-    "price": 99,
-    "period": "yearly",
-    "tag": "Best Seller",
-    "tagType": "best-seller",
-    "features": ["Drag & drop builder", "Custom domains", "SEO tools"],
-    "icon": "website-icon"
-  },
+  
   {
     "id": 6,
     "name": "AI Image Generator",
@@ -63,39 +63,39 @@
     "tag": "New",
     "tagType": "new",
     "features": ["Text to image", "HD export", "Custom styles"],
-    "icon": "image-icon"
-  },
-  {
-    "id": 7,
-    "name": "Productivity Suite",
-    "description": "Manage tasks, notes, and schedules efficiently using all in one productivity tools.",
-    "price": 59,
-    "period": "yearly",
-    "tag": "Popular",
-    "tagType": "popular",
-    "features": ["Task manager", "Notes", "Calendar integration"],
-    "icon": "productivity-icon"
+    "image": "https://i.ibb.co.com/VcgKQFdw/social-media.png"
   },
   {
     "id": 8,
-    "name": "Video Editing Toolkit",
-    "description": "Edit videos professionally with advanced tools, effects, and smooth transitions easily.",
-    "price": 79,
-    "period": "one-time",
+    "name": "Online Course Platform",
+    "description": "Create and sell online courses with built-in video hosting and analytics tools.",
+    "price": 45,
+    "period": "monthly",
     "tag": "Best Seller",
     "tagType": "best-seller",
-    "features": ["4K editing", "Transitions", "Audio tools"],
-    "icon": "video-icon"
+    "features": ["Video hosting", "Student management", "Analytics"],
+    "image": "https://i.ibb.co.com/FN7KhT3/Play.png"
   },
   {
     "id": 9,
-    "name": "Email Marketing Pro",
-    "description": "Create, automate, and track email campaigns to improve engagement and conversions.",
-    "price": 20,
-    "period": "monthly",
+    "name": "Startup Launch Kit",
+    "description": "All-in-one toolkit to launch your startup including branding and marketing tools.",
+    "price": 75,
+    "period": "one-time",
     "tag": "New",
     "tagType": "new",
-    "features": ["Email templates", "Automation", "Analytics"],
-    "icon": "email-icon"
+    "features": ["Brand assets", "Marketing tools", "Launch checklist"],
+    "image": "https://i.ibb.co.com/nsxhz95P/rocket.png"
+  },
+  {
+    "id": 7,
+    "name": "Cloud Storage Pro",
+    "description": "Securely store and access your files anytime with fast cloud storage solutions.",
+    "price": 12,
+    "period": "monthly",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": ["100GB storage", "Secure backup", "Fast access"],
+    "image": "https://i.ibb.co.com/7c06fnd/package.png"
   }
 ]

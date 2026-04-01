@@ -22,7 +22,7 @@ const NavBar = ({ selectedProduct }) => {
                             <li><a>FAQ</a></li>
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">daisyUI</a>
+                    <a className=" text-xl font-bold text-4xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"> DigiTools</a>
                 </div>
 
                 <div className="navbar-center hidden lg:flex">

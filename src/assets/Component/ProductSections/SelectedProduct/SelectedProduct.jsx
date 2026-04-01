@@ -1,5 +1,6 @@
 import React from 'react';
 import Img from "../../../products/shopping-cart.png";
+import { toast } from 'react-toastify';
 
 const SelectedProduct = ({ selectedProduct, setSelectedProduct }) => {
 
@@ -9,7 +10,7 @@ const SelectedProduct = ({ selectedProduct, setSelectedProduct }) => {
         );
         // alert("removed from cart")
         setSelectedProduct(filteredProduct);
-        alert(`${Product.name} ! removed from car`)
+        toast.info(`${Product.name} ! removed from car`)
     }
 
     const totalPrice = selectedProduct.reduce((sum, product) => sum + product.price, 0);
@@ -29,7 +30,7 @@ const SelectedProduct = ({ selectedProduct, setSelectedProduct }) => {
                  selectedProduct.map((Product, index) => (
                     <div className="flex justify-between mb-4 bg-gray-50 rounded-2xl items-center border p-8" key={index}>
                         <div className="flex items-center gap-3">
-                            <img src={Img} alt="Img" />
+                            <img src={Product.image} alt="Img" />
                             <div>
                                 <h2 className='font-bold text-2xl'>{Product.name}</h2>
                                 <p className='text-2xl'>${Product.price} / {Product.period}</p>
@@ -50,7 +51,7 @@ const SelectedProduct = ({ selectedProduct, setSelectedProduct }) => {
                 <button className='btn text-2xl py-7 rounded-2xl w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white'
                     onClick={() => {
                         setSelectedProduct([]);
-                        alert("Proceed to Checkout ! All Removed");
+                        toast.success("Proceed to Checkout ! All Removed");
                     }}>
                     Proceed to Checkout
                 </button>

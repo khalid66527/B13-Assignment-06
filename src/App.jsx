@@ -11,6 +11,7 @@ import StepsSection from './assets/Component/StepsSection/StepsSection';
 import TransparentPricing from './assets/Component/TransparentPricing/TransparentPricing';
 import TransformWorkflow from './assets/Component/TransformWorkflow/TransformWorkflow';
 import Footer from './assets/Component/Footer/Footer';
+import { ToastContainer } from 'react-toastify';
 
 const fetchProducts = async () => {
   const res = await fetch("/Products.json")
@@ -49,6 +50,7 @@ function App() {
       <TransparentPricing></TransparentPricing>
       <TransformWorkflow></TransformWorkflow>
       <Footer></Footer>
+      <ToastContainer />
 
      
     </>
