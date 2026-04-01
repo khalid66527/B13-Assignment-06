@@ -8,6 +8,7 @@ import Review from './assets/Component/ReviewSection/Review'
 import SelectedBtnSection from './assets/Component/SelectedBtnSection/SelectedBtnSection'
 import SelectedProduct from './assets/Component/ProductSections/SelectedProduct/SelectedProduct';
 import StepsSection from './assets/Component/StepsSection/StepsSection';
+import TransparentPricing from './assets/Component/TransparentPricing/TransparentPricing';
 
 const fetchProducts = async () => {
   const res = await fetch("/Products.json")
@@ -43,6 +44,7 @@ function App() {
         }
       </Suspense>
       <StepsSection></StepsSection>
+      <TransparentPricing></TransparentPricing>
 
      
     </>
