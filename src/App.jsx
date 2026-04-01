@@ -9,6 +9,8 @@ import SelectedBtnSection from './assets/Component/SelectedBtnSection/SelectedBt
 import SelectedProduct from './assets/Component/ProductSections/SelectedProduct/SelectedProduct';
 import StepsSection from './assets/Component/StepsSection/StepsSection';
 import TransparentPricing from './assets/Component/TransparentPricing/TransparentPricing';
+import TransformWorkflow from './assets/Component/TransformWorkflow/TransformWorkflow';
+import Footer from './assets/Component/Footer/Footer';
 
 const fetchProducts = async () => {
   const res = await fetch("/Products.json")
@@ -45,6 +47,8 @@ function App() {
       </Suspense>
       <StepsSection></StepsSection>
       <TransparentPricing></TransparentPricing>
+      <TransformWorkflow></TransformWorkflow>
+      <Footer></Footer>
 
      
     </>
